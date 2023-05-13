@@ -1,0 +1,320 @@
+<!doctype html>
+<html class="no-js" lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <title>Apps com Bootstrap</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div class="d-flex flex-column vh-100">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between sticky-top">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Bootstrap Apps</a>
+      <div></div> <!-- essa div é só para o logo não ficar colado na esquerda-->
+
+      <!-- Links -->
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="color-selector.html">Color Selector</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="counter.html">Counter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stopwatch.html">Stopwatch</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="to-do-list.html">To-Do List</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="countdown.html">Countdown</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="">
+    </header>
+
+  <main class="flex-grow-1 pb-3 pt-sm-3 text-justify">
+    <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+      <div class="container">
+        <h1>To-Do List</h1>
+        <p class="lead">The app manages a list of errands and other tasks that one intends to accomplish.</p>
+      </div>
+    </div>
+
+
+
+    <!-- <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
+              <div class="card-body py-4 px-4 px-md-5">
+
+                <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                  <i class="fas fa-check-square me-1"></i>
+                </p>
+
+                <div class="pb-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-row align-items-center">
+                        <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                          placeholder="Add new...">
+                        <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i
+                            class="fas fa-calendar-alt fa-lg me-3"></i></a>
+                        <div>
+                          <button type="button" class="btn btn-primary">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container">
+
+                  <h3>Todo</h3>
+                  <ul id="incomplete-tasks" class="list-group rounded-0 bg-transparent">
+                    <li
+                      class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+                        <div class="form-check">
+                          <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+                            aria-label="..." checked />
+                        </div>
+                    </li>
+                    <li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                      <p class="lead fw-normal mb-0">Buy groceries for next week</p>
+                      <button class="edit">Edit</button>
+                      <button class="delete">Delete</button>
+                    </li>
+
+                    <li
+                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="form-check">
+                      <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked2"
+                        aria-label="..." />
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                    <p class="lead fw-normal mb-0">Renew car insurance</p>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                  </li>
+
+                  <li
+                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="form-check">
+                      <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked3"
+                        aria-label="..." />
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                    <p class="lead fw-normal mb-0">Sign up for online
+                      course</p>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                  </li>
+
+                  </ul>
+
+                  <h3>Completed</h3>
+                  <ul id="completed-tasks">
+                    <li>
+                      <input type="checkbox" checked="">
+                      <label>See the Doctor</label>
+                      <input type="text">
+                      <button class="edit">Edit</button>
+                      <button class="delete">Delete</button>
+                    </li>
+                  </ul>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="d-flex justify-content-end align-items-center mb-4 pt-2 pb-3">
+
+                  <a href="#!" style="color: #23af89;" data-mdb-toggle="tooltip" title="Ascending"><i
+                      class="fas fa-sort-amount-down-alt ms-2"></i></a>
+                </div>
+
+                <ul class="list-group list-group-horizontal rounded-0 bg-transparent">
+                  <li
+                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="form-check">
+                      <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+                        aria-label="..." checked />
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                    <p class="lead fw-normal mb-0">Buy groceries for next week</p>
+                  </li>
+                  <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="d-flex flex-row justify-content-end mb-1">
+                      <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
+                          class="fas fa-pencil-alt me-3"></i></a>
+                      <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
+                          class="fas fa-trash-alt"></i></a>
+                    </div>
+                    <div class="text-end text-muted">
+                      <a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="Created date">
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="list-group list-group-horizontal rounded-0">
+                  <li
+                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="form-check">
+                      <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked2"
+                        aria-label="..." />
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                    <p class="lead fw-normal mb-0">Renew car insurance</p>
+                  </li>
+                  <li class="list-group-item px-3 py-1 d-flex align-items-center border-0 bg-transparent">
+
+                  </li>
+                  <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="d-flex flex-row justify-content-end mb-1">
+                      <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
+                          class="fas fa-pencil-alt me-3"></i></a>
+                      <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
+                          class="fas fa-trash-alt"></i></a>
+                    </div>
+
+                  </li>
+                </ul>
+                <ul class="list-group list-group-horizontal rounded-0 mb-2">
+                  <li
+                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="form-check">
+                      <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked3"
+                        aria-label="..." />
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                    <p class="lead fw-normal mb-0 bg-light w-100 ms-n2 ps-2 py-1 rounded">Sign up for online
+                      course</p>
+                  </li>
+                  <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
+                    <div class="d-flex flex-row justify-content-end mb-1">
+                      <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
+                          class="fas fa-trash-alt"></i></a>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="container">
+                  <p>
+                    <label for="new-task">Add Item</label>
+                    <input id="new-task" type="text">
+                    <button>Add</button>
+                  </p>
+
+                  <h3>Todo</h3>
+                  <ul id="incomplete-tasks">
+                    <li>
+                      <input type="checkbox">
+                      <label>Pay Bills</label>
+                      <input type="text">
+                      <button class="edit">Edit</button>
+                      <button class="delete">Delete</button>
+                    </li>
+                    <li class="editMode">
+                      <input type="checkbox">
+                      <label>Go Shopping</label>
+                      <input type="text" value="Go Shopping">
+                      <button class="edit">Edit</button>
+                      <button class="delete">Delete</button>
+                    </li>
+                  </ul>
+
+                  <h3>Completed</h3>
+                  <ul id="completed-tasks">
+                    <li>
+                      <input type="checkbox" checked="">
+                      <label>See the Doctor</label>
+                      <input type="text">
+                      <button class="edit">Edit</button>
+                      <button class="delete">Delete</button>
+                    </li>
+                  </ul>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <div class="container text-center" id="lista">
+      <div class="row justify-content-xl-center">
+        <div class="col form-group">
+          <button
+            id="adicionar"
+            type="button" class="btn btn-success form-control"
+          >
+            <i class="bi bi-plus-circle-fill"></i>
+            Add task
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="col d-flex">
+        <input type="checkbox" class="mr-2"/>
+        <input type="text" class="form-control" placeholder="Enter task here..."/>
+          <button type="button" class="btn btn-danger text-center">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </div> -->
+      </div>
+
+  </main>
+  <footer class="bg-light text-secondary font-italic text-center pb-2">
+    Copyright &copy; Sayonara Crestani - 2022
+  </footer>
+</div>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/popper.js/dist/popper.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/to-do-list.js"></script>
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
