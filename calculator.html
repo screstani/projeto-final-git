@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<head>
+    <meta charset="utf-8">
+    <title>Apps com Bootstrap</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+  
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+  
+    <meta name="theme-color" content="#fafafa">
+
+    <style>
+        .calculator {
+          width: 200px;
+          border: 1px solid #ccc;
+          padding: 10px;
+        }
+        .calculator input[type="button"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 5px;
+        }
+      </style>
+  </head>
+
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <input type="button" value="1" onclick="addToDisplay(1)">
+    <input type="button" value="2" onclick="addToDisplay(2)">
+    <input type="button" value="3" onclick="addToDisplay(3)">
+    <input type="button" value="4" onclick="addToDisplay(4)">
+    <input type="button" value="5" onclick="addToDisplay(5)">
+    <input type="button" value="6" onclick="addToDisplay(6)">
+    <input type="button" value="7" onclick="addToDisplay(7)">
+    <input type="button" value="8" onclick="addToDisplay(8)">
+    <input type="button" value="9" onclick="addToDisplay(9)">
+    <input type="button" value="0" onclick="addToDisplay(0)">
+    <input type="button" value="+" onclick="addToDisplay('+')">
+    <input type="button" value="-" onclick="addToDisplay('-')">
+    <input type="button" value="*" onclick="addToDisplay('*')">
+    <input type="button" value="/" onclick="addToDisplay('/')">
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="C" onclick="clearDisplay()">
+  </div>
+  
+  <script>
+    function addToDisplay(value) {
+      document.getElementById("display").value += value;
+    }
+    
+    function calculate() {
+      var display = document.getElementById("display");
+      var result = eval(display.value);
+      display.value = result;
+    }
+    
+    function clearDisplay() {
+      document.getElementById("display").value = "";
+    }
+  </script>
+</body>
+</html>
