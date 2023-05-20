@@ -1,5 +1,6 @@
 const passInput = document.querySelector("#inputPasswordId");
 const lenInput = document.querySelector("#inputLengthId");
+const rangeValue = document.querySelector("#rangeValue");
 const infoLength = document.querySelector('label[for="inputLengthId"]');
 const btnGerar = document.querySelector("#btnGerar");
 
@@ -20,6 +21,9 @@ infoLength.innerHTML = lenInput.value;
 lenInput.addEventListener("input", () => {
   infoLength.innerHTML = "Comprimento da Senha: " + lenInput.value;
 });
+
+/* lenInput.addEventListener("input", updateRangeValue);
+updateRangeValue(); */
 
 btnGerar.addEventListener("click", () => {
   generatePassword(
