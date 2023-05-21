@@ -40,7 +40,7 @@ function isValidNamedColor(color) {
     "yellowgreen",
 
     // Portuguese color names
-    "branco", "preto", "cinza", "vermelho", "verde", "azul", "amarelo", "laranja", "rosa",
+    "branco", "preto", "cinza", "vermelho", "verde", "azul", "amarelo", "laranja", "rosa", "fuchsia", "magenta", "ambar",
     "roxo", "marrom", "bege", "roxo", "violeta", "magenta", "ciano", "turquesa", "aqua",
     "azul-claro", "azul-escuro", "verde-claro", "verde-escuro", "amarelo-claro", "amarelo-escuro",
     "laranja-claro", "laranja-escuro", "rosa-claro", "rosa-escuro", "roxo-claro", "roxo-escuro", 
