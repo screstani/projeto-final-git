@@ -22,9 +22,6 @@ lenInput.addEventListener("input", () => {
   infoLength.innerHTML = "Comprimento da Senha: " + lenInput.value;
 });
 
-/* lenInput.addEventListener("input", updateRangeValue);
-updateRangeValue(); */
-
 btnGerar.addEventListener("click", () => {
   generatePassword(
     chkNumber.checked,
